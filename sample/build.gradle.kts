@@ -9,7 +9,7 @@ plugins {
 android {
     compileSdk = 32
     defaultConfig {
-        applicationId = "com.mobillium.blueprint"
+        applicationId = "com.mobillium.blueprint.sample"
         minSdk = 21
         targetSdk = 32
         versionCode = 1

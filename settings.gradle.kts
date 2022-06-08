@@ -8,3 +8,4 @@ pluginManagement {
 
 rootProject.name = "blueprint"
 include(":sample")
+include(":blueprint")
