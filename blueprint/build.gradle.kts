@@ -62,3 +62,14 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 }
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.mobillium.blueprint"
+            artifactId = "blueprint"
+            version = "0.0.4"
+            from(components["java"])
+        }
+    }
+}
