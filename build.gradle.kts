@@ -25,6 +25,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven(uri("https://jitpack.io"))
     }
 
     apply(plugin = "org.jlleitschuh.gradle.ktlint")
