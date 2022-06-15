@@ -4,7 +4,9 @@ import com.mobillium.blueprint.utils.DateUtils
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
+import java.text.SimpleDateFormat
 import java.util.*
+
 
 /**
  * @author karacca
@@ -33,6 +35,26 @@ class DateUtilsTest {
         )
 
         val expected = "08.06.2022"
+        assertEquals(given, expected)
+    }
+
+
+    @Test
+    fun `String date given output expected as Date object`() {
+        val dateString = "2020-10-08T13:30:00.000Z"
+
+        val given = SimpleDateFormat(
+            DateUtils.InputFormat.YYYY_MM_DDTHH_MM_SS_SSS.value,
+            Locale.ENGLISH
+        ).parse(dateString)
+
+
+        val expected = DateUtils.dateFromString(
+            dateString,
+            DateUtils.InputFormat.YYYY_MM_DDTHH_MM_SS_SSS,
+            Locale.getDefault()
+        )
+
         assertEquals(given, expected)
     }
 }
