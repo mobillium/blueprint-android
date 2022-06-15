@@ -19,6 +19,7 @@ object DateUtils {
     }
 
     enum class OutputFormat(val value: String) {
-        DD_MM_YYYY("dd.MM.yyyy")
+        DD_MM_YYYY("dd.MM.yyyy"),
+        DD_MM_YYYY_HH_MM("dd.MM.yyyy HH:mm")
     }
 }
